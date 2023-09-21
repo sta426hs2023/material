@@ -57,55 +57,10 @@ Mondays 9.00-11:45 (Y27-H-46)
 
 </td></tr></table>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
 
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      height: 100%;
-      width: 2px;
-      background-color: #007bff;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 8px;
-      text-align: left;
-      border: 1px solid #ddd; /* Add a border to all table cells */
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-
-    tr:hover {
-      background-color: #ddd;
-    }
-  </style>
-</head>
-<body>
 
 <div class="timeline">
-  <h1>My Timeline</h1>
+  <h2>My Timeline</h2>
 
   <table>
     <thead>
@@ -282,7 +237,7 @@ Alternatively, to retrieve a ZIP file of the repository, you can click on the (g
 <table border="0">
 <tr><td>
 
-![Image Description](resources/Profile.jpeg)
+<img src="resources/Profile.jpeg" width="215" alt="Image Description" />
 
 </td><td>
 
