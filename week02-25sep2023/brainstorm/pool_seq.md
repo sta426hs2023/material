@@ -19,6 +19,6 @@ Pool-seq is a cost-effective RNA-seq (15$/sample) method that drew inspiration f
 ## Make the link
 Pool-seq -> Transposable Element Discovery, estimate frequencies of transposable elements [Original paper](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4) -> Non parametric Mann-Whitney U Test on population frequencies [Original paper](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4)
 
-Pool-seq -> Differential gene expression analysis [Review](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6478-3#Fig1) -> PCA, ROC analysis [Review](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6478-3#Fig1)
+3'Pool-seq -> Differential gene expression analysis [Review](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6478-3#Fig1) -> PCA, ROC analysis [Review](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6478-3#Fig1)
 
 
