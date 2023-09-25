@@ -16,6 +16,7 @@ Investigate the epigenome. This can play a role in a variety of areas such as ca
 -	https://eu.idtdna.com/pages/products/next-generation-sequencing/methods/methyl-seq
 -	https://en.wikipedia.org/wiki/Bisulfite_sequencing
 -	https://www.nature.com/articles/s41587-021-01108-x#Sec1
+-	https://clinicalepigeneticsjournal.biomedcentral.com/articles/10.1186/s13148-019-0795-x
 
 ### Github names
 Matthias-git-12  
