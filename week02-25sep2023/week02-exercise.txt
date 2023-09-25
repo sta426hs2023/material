@@ -1,0 +1,25 @@
+(also on Slack)
+
+Week 2 Exercise Part A (as a group): Technology
+
+- using simple terms, write a 2-3 point summary of "how your technology works"
+- find links to a few (<=3) good resources (review papers, wikis, youtube videos)
+- create a markdown file with your description; make it your README.md in the "group assignment" repo
+- in the README.md, also include the GitHub usernames of all members of the group
+
+
+Week 2 Exercise Part B (as a group): linking *Technology*/*Application* for Sequencing Assay
+
+- browse the list of **-seq assays (see [1,2] below) and pick one to summarize
+- write 2-3 sentences about what the assay does and what it is used for (include links to relevant resources)
+- make the link (technology -> application -> statistics); add this to your summary
+- create a markdown file (name it with the selected assay) with the description
+- in the markdown file, also include the GitHub usernames of all members of the group
+- fork the [material](https://github.com/sta426hs2023/material) repo
+- add your markdown file to the `week02-26sep2023/brainstorm` directory of the fork
+- send a pull request to the main branch repo of the `material` repo
+
+
+Links to **-seq:
+[1] https://liorpachter.wordpress.com/seq/
+[2] https://www.illumina.com/content/dam/illumina-marketing/documents/applications/ngs-library-prep/ForAllYouSeqMethods.pdf
