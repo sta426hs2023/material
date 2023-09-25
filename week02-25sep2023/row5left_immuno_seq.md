@@ -10,7 +10,7 @@ Immunosequencing measures TCR / BCR CDR3 diversity based on single-molecule DNA 
 
 **Application:** Sequencing of the B-cell and T-cell repertoire.
 
-**Statistics:"**
+**Statistics:**
 - Chi-square Test: A test to determine statistical significance of the difference in TCR and BCR abundances between samples.
 
 - Morisita-Horn Index: A statistical measure of dispersion of individuals in a population. It accounts for both the number and abundance of shared TCRs between two repertoires (score ranges between 0 = no overlap and 1 = all clones overlap at similar frequencies).
