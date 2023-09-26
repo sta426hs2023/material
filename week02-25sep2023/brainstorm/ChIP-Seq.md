@@ -13,7 +13,7 @@ Figure 1 (see \[3\]): procedure of ChIP-Seq, illustrating the selective extracti
   | Technology  | Application | Statistics (see \[2\])  |
   | ----------- | ----------- | ----------- |
   | ChIP-Seq    | analyze protein interactions with DNA     | Poisson distribution       |
-  |    |        | Negative binomial regression        |
+  |    |        | Negative binomial distribution        |
   |    |         | Mixture models (a mixture of two negative binomial distributions)        |
   
 
