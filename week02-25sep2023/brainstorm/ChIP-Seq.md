@@ -2,7 +2,9 @@
 
 - **Summary (see \[1\]):** ChIP-Seq combines chromatin immunoprecipitation (ChIP) with massively parallel DNA sequencing to identify binding sites of DNA-associated proteins. The principle behind the CHIP-seq is using antibodies to pull down target proteins, which protect their DNA binding sites from DNA fragmentation, thus only the protected DNA fragments are extracted. This allows for the analysis of protein-DNA interactions, e.g. the regulatory function of transcription factors, or chromatin modifications landscape.
 
-![WhatsApp Image 2023-09-25 at 21 49 46](https://github.com/danaebroustail/material/assets/72189779/fa16e293-d4c3-420d-984d-f7c389da47e4)
+<p align="center">
+<img src="https://github.com/danaebroustail/material/assets/72189779/fa16e293-d4c3-420d-984d-f7c389da47e4" alt="chipseq" width="600"/>
+
 
 Figure 1 (see \[3\]): procedure of ChIP-Seq, illustrating the selective extraction of transcription factor (TF) bound DNA with the help of antibodies (AB)
 
@@ -11,7 +13,7 @@ Figure 1 (see \[3\]): procedure of ChIP-Seq, illustrating the selective extracti
   | Technology  | Application | Statistics (see \[2\])  |
   | ----------- | ----------- | ----------- |
   | ChIP-Seq    | analyze protein interactions with DNA     | Poisson distribution       |
-  |    |         | Negative binomial regression        |
+  |    |        | Negative binomial regression        |
   |    |         | Mixture models (a mixture of two negative binomial distributions)        |
   
 
