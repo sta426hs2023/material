@@ -1,6 +1,6 @@
 # ChIP-sequencing
 
-- **Summary (see [1]):** ChIP-Seq combines chromatin immunoprecipitation (ChIP) with massively parallel DNA sequencing to identify binding sites of DNA-associated proteins. The principle behind the CHIP-seq is using antibodies to pull down target proteins, which protect their DNA binding sites from DNA fragmentation, thus only the protected DNA fragments are extracted. This allows for the analysis of protein-DNA interactions, e.g. the regulatory function of transcription factors, or chromatin modifications landscape.
+- **Summary (see [[1]]([1]):** ChIP-Seq combines chromatin immunoprecipitation (ChIP) with massively parallel DNA sequencing to identify binding sites of DNA-associated proteins. The principle behind the CHIP-seq is using antibodies to pull down target proteins, which protect their DNA binding sites from DNA fragmentation, thus only the protected DNA fragments are extracted. This allows for the analysis of protein-DNA interactions, e.g. the regulatory function of transcription factors, or chromatin modifications landscape.
 
 
 ![image](https://github.com/danaebroustail/material/assets/72189779/5c8b091f-4bde-4a83-97e3-9caeb571d87b)
