@@ -1,24 +1,27 @@
-Some statistical tests: Kolmogorov-Smirnov, Mann-Whitney tests, Fisher's exact test Chi-square test.
-
 ## Github usernames of group members:
 
 burrusa
+
 mcibien
+
 dipayan-akhuli
+
 EricEReber
 
-## Resources
+## Resources:
 
-[Review](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6478-3#Fig1)
 [Original Paper](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4)
 
+[More Generic Application](https://www.nature.com/articles/srep33735)
 
-## Brief description
-Pool-seq is a cost-effective RNA-seq (15$/sample) method that drew inspiration from RNA-seq methods like Drop-seq, SMART-seq and TruSeq. It works by generating dual indexed cDNA samples with i5 and i7 primers where the former serves as pool index and the latter as sample index within the pool. The barcoded cDNA can then be further used by NGS methods such as Illumina.
+## Brief description:
 
-## Make the link
-Pool-seq -> Transposable Element Discovery, estimate frequencies of transposable elements [Original paper](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4) -> Non parametric Mann-Whitney U Test on population frequencies [Original paper](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4)
+-   Pool-seq is a low-cost sequencing approach used in population genetics and epidemiological studies in order to circumvent the high costs of NGS per individual for large population sizes.
 
-3'Pool-seq -> Differential gene expression analysis [Review](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6478-3#Fig1) -> PCA, ROC analysis [Review](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6478-3#Fig1)
+-   The first step is to pool together the genomic DNA from multiple individuals in a population, and to then perform Illumina sequencing of many such pools in a multiplexed fashion, thereby increasing the total number of individuals sequenced [[1]](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4).
 
+-   Even though it apparently treats multiple individuals as the same sample, accurate estimation of rare allele frequencies (AF) in the population (which is crucial on a population scale) is enabled by using appropriate filters. Thus, Pool-seq AFs are as accurate as those obtained from individual sequencing [[2]](https://www.nature.com/articles/srep33735).
 
+## Make the link:
+
+Pool-seq -\> Estimation of population frequencies of transposable elementsto study genome evolution in *Drosophila melanogaster* -\> Non-parametric Mann-Whitney U test to analyze population frequencies, AIC to test model fit, Tajima's *D* to measure nucleotide diversity [[1]](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4).
