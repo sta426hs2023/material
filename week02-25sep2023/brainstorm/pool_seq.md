@@ -14,14 +14,15 @@ EricEReber
 
 [More Generic Application](https://www.nature.com/articles/srep33735)
 
+[PoolSeq R Package Paper][https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14185#:~:text=Pool%2Dseq%20is%20a%20sequencing,together%20and%20sequencing%20them%20collectively]
+
 ## Brief description:
+-   Intro: Next-generation sequencing of pooled samples (Pool-seq) is a method for assessing genetic diversity within a population by combining multiple individual DNA samples into pooled libraries before sequencing.
 
--   Pool-seq is a low-cost sequencing approach used in population genetics and epidemiological studies in order to circumvent the high costs of NGS per individual for large population sizes.
+-   Method: The Pool-seq process consists of first determining the pool size and desired sequencing depth, then combining DNA from individual samples into pools, creating single libraries for each pool without the need for individual tagging, and finally sequencing the pooled libraries using NGS technologies to generate population-level genomic data.
 
--   The first step is to pool together the genomic DNA from multiple individuals in a population, and to then perform Illumina sequencing of many such pools in a multiplexed fashion, thereby increasing the total number of individuals sequenced [[1]](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4).
-
--   Even though it apparently treats multiple individuals as the same sample, accurate estimation of rare allele frequencies (AF) in the population (which is crucial on a population scale) is enabled by using appropriate filters. Thus, Pool-seq AFs are as accurate as those obtained from individual sequencing [[2]](https://www.nature.com/articles/srep33735).
+-   Example of applications: Sequencing of Pooled DNA Samples can be used to uncover complex dynamics of transposable element Insertions in Drosophila melanogaster (as in our paper)
 
 ## Make the link:
 
-Pool-seq -\> Estimation of population frequencies of transposable elementsto study genome evolution in *Drosophila melanogaster* -\> Non-parametric Mann-Whitney U test to analyze population frequencies, AIC to test model fit, Tajima's *D* to measure nucleotide diversity [[1]](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4).
+Pool-seq -\> Estimation of population frequencies of transposable elements to study genome evolution in *Drosophila melanogaster* -\> Non-parametric Mann-Whitney U test to analyze population frequencies, AIC to test model fit, Tajima's *D* to measure nucleotide diversity [[1]](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4).
