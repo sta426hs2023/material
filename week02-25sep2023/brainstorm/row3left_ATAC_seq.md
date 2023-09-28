@@ -1,3 +1,22 @@
+# ATAC-seq
+
+
+## What is ATAC-seq
+
+## How does ATAC-seq work
+
+## Interesting applications
+
+## Benefits compared to other techniques
+
+## Summary
+
+
+
+
+
+
+
 
 ## Github Usernames
 <table border="0">
