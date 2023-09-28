@@ -10,6 +10,7 @@
 ## Interesting applications
 
 ## Benefits compared to other techniques
+
 | Feature | ATAC-seq | ChIP-seq | RNA-seq |
 |---|---|---|---|
 | Input material requirement | Lower | Higher | Lower |
