@@ -1,7 +1,9 @@
-# ATAC-seq
+# ATAC-seq Week 2 Exercise Part B
 
 
 ## What is ATAC-seq
+
+
 
 ## How does ATAC-seq work
 
@@ -10,7 +12,13 @@
 ## Benefits compared to other techniques
 
 ## Summary
+ATAC-seq is an abbreviation for 'Assay for Transposase-Accessible Chromatin with sequencing,' a molecular biology technique employed to evaluate the accessibility of chromatin throughout the entire genome. In this assay, next-generation sequencing (NGS) adapters are loaded onto the transposase, which allows simultaneous fragmentation of chromatin and integration of those adapters into open chromatin regions. The generated library can be sequenced by NGS and thus bioinformatic methods can be used to analyze the regions of the genome with open or accessible chromatin.
 
+The link (technology -> application -> statistics)
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Data 1   | Data 2   | Data 3   |
+```
 
 
 
