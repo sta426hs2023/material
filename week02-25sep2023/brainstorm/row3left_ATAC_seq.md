@@ -18,10 +18,6 @@ The link (technology -> application -> statistics)
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
 | Data 1   | Data 2   | Data 3   |
-```
-
-
-
 
 
 
