@@ -1,9 +1,13 @@
 # DNAse-seq
-DNase-seq, short for DNase I hypersensitive sites sequencing, is a method used to identify regions of the genome that are accessible to the protein DNase I. These accessible regions often correspond to regulatory elements, such as promoters, enhancers, and insulators, which play crucial roles in gene expression. By sequencing the DNA fragments that are cleaved by DNase I, researchers can create a genome-wide map of these regulatory elements, providing insights into the regulatory landscape of a cell.
+DNase-seq, short for DNase I hypersensitive sites sequencing, is a method used to identify regions of the genome (DNAse hypersensitivity sites, DHS) that are accessible to the protein DNase I. These accessible regions often correspond to regulatory elements, such as promoters, enhancers, and insulators, which play crucial roles in gene expression. By sequencing the DNA fragments that are cleaved by DNase I, researchers can create a genome-wide map of these regulatory elements, providing insights into the regulatory landscape of a cell. More information can be found in the paper [High-Resolution Mapping and Characterization of Open Chromatin across the Genome](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2669738/).
 
 | Technology | Application | Statistics |
 | ---------- | ----------- | ---------- |
-| DNAse-seq | Mapping regulatory elements, create regulatory networks | Monte-Carlo methods |
+| DNAse-seq | Map chromatin state, map regulatory elements, create regulatory networks, Differential Accessibility Analysis, Motif Enrichment Analysis | Monte-Carlo methods |
+
+_Differential Accessibility Analysis_: For experiments comparing different conditions or cell types, statistical methods are used to identify regions with differential chromatin accessibility.
+
+_Motif Enrichment Analysis_: Once DHSs are identified, motif analysis can be performed to predict which transcription factors might be binding to these regions.
 
 ## Literature
 You may find here some scientific literature about the DNAse-sequencing :
@@ -22,3 +26,4 @@ peterlundandersen
 marie3003
 
 juslecl
+
