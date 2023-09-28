@@ -9,6 +9,22 @@ By analyzing what regions are open, it’s possible to understand what areas of 
 ![ATAC](Pictures/ATAC.jpeg)
 
 ## How does ATAC-seq work
+### Five steps
+- Tagmentation:
+Resuspend the nuclei in tagmentation buffer.
+Add the Tn5 transposase enzyme and sequencing adapters.
+Incubate the reaction at 37°C for 30 minutes.
+
+- DNA Purification:
+Purify the tagged DNA fragments using a DNA purification kit.
+
+- PCR Amplification:
+Amplify the tagged DNA fragments using PCR primers.
+Adjust the number of PCR cycles based on the desired sequencing depth.
+
+- Sequencing:
+Sequence the PCR-amplified DNA library using an NGS platform.
+
 
 ## Interesting applications
 
