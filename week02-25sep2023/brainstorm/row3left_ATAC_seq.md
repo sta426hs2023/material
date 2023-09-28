@@ -28,12 +28,12 @@ Sequence the PCR-amplified DNA library using an NGS platform.
 
 ## How is ATAC-seq analysis conducted?
 The four most important steps of ATAC-seq analysis include:
-pre-analysis (quality control (QC) and alignment),
-core analysis (peak calling),
-advanced analysis at the level of peaks, motifs, nucleosomes, and TF footprints, 
-integration with multi-omics data to reconstruct regulatory networks.
+- Pre-analysis (quality control (QC) and alignment),
+- Core analysis (peak calling),
+- Advanced analysis at the level of peaks, motifs, nucleosomes, and TF footprints, 
+- Integration with multi-omics data to reconstruct regulatory networks.
 
-- **Link:** [analisis]([https://academic.oup.com/bib/article/23/3/bbac061/6543486](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3))
+- **Link:** [analisis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3)
 ![ATAC](Pictures/analysis.png)
 
 
