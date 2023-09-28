@@ -3,7 +3,7 @@ DNase-seq, short for DNase I hypersensitive sites sequencing, is a method used t
 
 | Technology | Application | Statistics |
 | ---------- | ----------- | ---------- |
-| DNAse-seq | Map chromatin state, map regulatory elements, create regulatory networks, Differential Accessibility Analysis, Motif Enrichment Analysis | Monte-Carlo methods, non-parametric statistical tests like Wilcoxon rank-sum test, |
+| DNAse-seq | Map chromatin state, map regulatory elements, create regulatory networks, Differential Accessibility Analysis, Motif Enrichment Analysis | Monte-Carlo methods, non-parametric statistical tests like Wilcoxon rank-sum test, DESeq2, edgeR|
 
 **Differential Accessibility Analysis**: For experiments comparing different conditions or cell types, statistical methods are used to identify regions with differential chromatin accessibility.
 
