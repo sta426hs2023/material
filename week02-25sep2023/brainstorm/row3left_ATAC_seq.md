@@ -71,6 +71,14 @@ __The link (technology -> application -> statistics)__
 | -------- | -------- | -------- |
 | Neph  | Identifying Differential Accessibility Regions (DARs) in cancer cells that were associated with disease progression  | It exploits the Negative Binomial (NB) distribution to first calculate the read count for each region of the genome of two samples. It then calculates a p-value for each region of the genome, where the null hypothesis is the hypothesis that there is no difference in chromatin accessibility between the two samples. Finally, the Neph tool corrects the p-values for multiple testing using the Benjamini-Hochberg procedure, where the FDR is the probability of incorrectly identifying a region of the genome as being differentially accessible. The main goal of this method is to identify DARs as the regions of the genome that have a p-value less than the adjusted significance threshold |
 | HINT-ATAC | Identifying DARs in cancer cells that were associated with drug resistance | It uses a hierarchical inference approach to model the read counts in each region of the genome as a mixture of negative binomial distributions. The hierarchical inference approach in HINT-ATAC allows the tool to identify DARs that are shared by multiple samples, as well as DARs that are specific to individual samples. This is important because it allows researchers to identify the regulatory elements that are involved in different biological processes. HINT-ATAC also uses a variety of statistical methods to control for false positives, including the Benjamini-Hochberg procedure and the Bonferroni correction. This helps to ensure that the DARs that are identified by HINT-ATAC are truly differentially accessible. |
+| msCentipede | Identifying regulatory elements in the genome that were associated with the expression of genes involved in the immune response to infection | It is based on a hierarchical Bayesian model that accounts for the overdispersion and correlation structure of the data. This model allows msCentipede to identify DARs with high accuracy and sensitivity, even in the presence of low signal-to-noise ratios. |
+
+Finally, we would like to remind you that the choice of statistical model is not univocal and depends on the specific type of analysis that is being performed
+- The NB distribution is typically used to identify differentially accessible regions (DARs) between two or more samples;
+- The Poisson distribution can be used to model the read count in a particular region of the genome;
+- The log-normal distribution can be used to model the normalized read count in a particular region of the genome;
+- The beta-binomial distribution can be used to model count data that is overdispersed and bounded between 0 and 1, such as the proportion of reads that map to a particular region of the genome.
+
 
 
 
