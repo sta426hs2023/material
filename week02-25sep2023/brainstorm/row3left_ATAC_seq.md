@@ -9,7 +9,7 @@ By analyzing what regions are open, it’s possible to understand what areas of 
 ![ATAC](Pictures/ATAC.jpeg)
 
 ## How does ATAC-seq work
-### Five steps
+### Five steps:
 - Tagmentation:
 Resuspend the nuclei in tagmentation buffer.
 Add the Tn5 transposase enzyme and sequencing adapters.
@@ -24,6 +24,17 @@ Adjust the number of PCR cycles based on the desired sequencing depth.
 
 - Sequencing:
 Sequence the PCR-amplified DNA library using an NGS platform.
+
+
+## How is ATAC-seq analysis conducted?
+The four most important steps of ATAC-seq analysis include:
+pre-analysis (quality control (QC) and alignment),
+core analysis (peak calling),
+advanced analysis at the level of peaks, motifs, nucleosomes, and TF footprints, 
+integration with multi-omics data to reconstruct regulatory networks.
+
+- **Link:** [analisis]([https://academic.oup.com/bib/article/23/3/bbac061/6543486](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3))
+![ATAC](Pictures/analysis.png)
 
 
 ## Interesting applications
