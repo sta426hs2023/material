@@ -3,7 +3,7 @@ DNase-seq, short for DNase I hypersensitive sites sequencing, is a method used t
 
 | Technology | Application | Statistics |
 | ---------- | ----------- | ---------- |
-| DNAse-seq | x | x |
+| DNAse-seq | Mapping regulatory elements, create regulatory networks | x |
 
 
 ### Authors
