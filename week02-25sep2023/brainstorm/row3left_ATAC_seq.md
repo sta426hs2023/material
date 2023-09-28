@@ -33,7 +33,7 @@ The four most important steps of ATAC-seq analysis include:
 - Advanced analysis at the level of peaks, motifs, nucleosomes, and TF footprints, 
 - Integration with multi-omics data to reconstruct regulatory networks.
 
-- **Link:** [analisis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3)
+**Link:** [Four steps of ATAC-seq analysis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3)
 ![ATAC](Pictures/analysis.png)
 
 
