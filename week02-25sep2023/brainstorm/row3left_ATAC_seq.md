@@ -10,6 +10,15 @@
 ## Interesting applications
 
 ## Benefits compared to other techniques
+| Feature | ATAC-seq | ChIP-seq | RNA-seq |
+|---|---|---|---|
+| Input material requirement | Lower | Higher | Lower |
+| Assay time | Shorter | Longer | Longer |
+| Library preparation | In situ | Nuclei isolation required | RNA extraction required |
+| Applicability to fresh-frozen tissue | Yes | Yes (with considerations) | Yes |
+| Technical difficulty | Easier | More difficult | More difficult |
+| What it measures | Chromatin accessibility | Protein-DNA binding | Gene expression |
+
 
 ## Summary
 ATAC-seq is an abbreviation for 'Assay for Transposase-Accessible Chromatin with sequencing,' a molecular biology technique employed to evaluate the accessibility of chromatin throughout the entire genome. In this assay, next-generation sequencing (NGS) adapters are loaded onto the transposase, which allows simultaneous fragmentation of chromatin and integration of those adapters into open chromatin regions. The generated library can be sequenced by NGS and thus bioinformatic methods can be used to analyze the regions of the genome with open or accessible chromatin.
