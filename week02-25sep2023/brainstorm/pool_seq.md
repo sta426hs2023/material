@@ -14,14 +14,14 @@ EricEReber
 
 [More Generic Application](https://www.nature.com/articles/srep33735)
 
-[PoolSeq R Package Paper][https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14185#:~:text=Pool%2Dseq%20is%20a%20sequencing,together%20and%20sequencing%20them%20collectively]
+[PoolSeq R Package Paper](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14185#:~:text=Pool%2Dseq%20is%20a%20sequencing,together%20and%20sequencing%20them%20collectively)
 
 ## Brief description:
 -   Intro: Next-generation sequencing of pooled samples (Pool-seq) is a method for assessing genetic diversity within a population by combining multiple individual DNA samples into pooled libraries before sequencing.
 
 -   Method: The Pool-seq process consists of first determining the pool size and desired sequencing depth, then combining DNA from individual samples into pools, creating single libraries for each pool without the need for individual tagging, and finally sequencing the pooled libraries using NGS technologies to generate population-level genomic data.
 
--   Example of applications: Sequencing of Pooled DNA Samples can be used to uncover complex dynamics of transposable element Insertions in Drosophila melanogaster (as in our paper)
+-   Example of applications: Sequencing of Pooled DNA Samples can be used to uncover complex dynamics of transposable element Insertions in Drosophila melanogaster [[1]](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1002487#s4).
 
 ## Make the link:
 
