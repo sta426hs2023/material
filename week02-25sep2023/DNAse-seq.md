@@ -5,9 +5,9 @@ DNase-seq, short for DNase I hypersensitive sites sequencing, is a method used t
 | ---------- | ----------- | ---------- |
 | DNAse-seq | Map chromatin state, map regulatory elements, create regulatory networks, Differential Accessibility Analysis, Motif Enrichment Analysis | Monte-Carlo methods |
 
-*Differential Accessibility Analysis*: For experiments comparing different conditions or cell types, statistical methods are used to identify regions with differential chromatin accessibility.
+**Differential Accessibility Analysis**: For experiments comparing different conditions or cell types, statistical methods are used to identify regions with differential chromatin accessibility.
 
-*Motif Enrichment Analysis*: Once DHSs are identified, motif analysis can be performed to predict which transcription factors might be binding to these regions.
+**Motif Enrichment Analysis**: Once DHSs are identified, motif analysis can be performed to predict which transcription factors might be binding to these regions.
 
 ## Literature
 You may find here some scientific literature about the DNAse-sequencing :
