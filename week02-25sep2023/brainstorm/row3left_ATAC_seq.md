@@ -5,8 +5,8 @@
 ATAC-seq is an abbreviation for 'Assay for Transposase-Accessible Chromatin with sequencing,' a molecular biology technique employed to evaluate the accessibility of chromatin throughout the entire genome. Chromatin accessibility pertains to the degree of compaction of DNA within the cell nucleus. Regions characterized by open or accessible chromatin are more prone to transcription into RNA and subsequent gene expression.
 By analyzing what regions are open, it’s possible to understand what areas of the DNA are influencing the cell state, to study gene regulation, cell differentiation, and development, as well as to identify genetic risk factors for disease.
 
-- **Link:** [What is ATAC-seq](https://academic.oup.com/bib/article/23/3/bbac061/6543486)
 ![ATAC](Pictures/ATAC.jpeg)
+- **Link:** [What is ATAC-seq](https://academic.oup.com/bib/article/23/3/bbac061/6543486)
 
 ## How does ATAC-seq work
 ### Five steps:
