@@ -39,6 +39,17 @@ The four most important steps of ATAC-seq analysis include:
 
 
 ## Interesting applications
+**Link** [Applications of ATAC-seq](https://emea.illumina.com/techniques/popular-applications/epigenetics/atac-seq-chromatin-accessibility.html)
+- __Disease-relevant regulatory mechanisms:__ ATAC-seq can be used to explore disease-relevant regulatory mechanisms. For example, researchers can use ATAC-seq to identify changes in chromatin accessibility that are associated with cancer, Alzheimer's disease, and other diseases. This information can help us to better understand how these diseases develop and to identify new therapeutic targets.
+
+- __Comparative epigenomics:__ ATAC-seq can be used to perform comparative epigenomics studies. For example, researchers can use ATAC-seq to compare the chromatin accessibility of different populations of people in order to identify epigenetic differences that are associated with disease or other traits. This information can help us to better understand the role of epigenetics in human health and disease.
+
+- __Biomarker discovery:__ ATAC-seq can be used to discover new biomarkers for disease. For example, researchers can use ATAC-seq to identify changes in chromatin accessibility that are associated with cancer, Alzheimer's disease, and other diseases. This information can be used to develop new tests for diagnosing and monitoring these diseases
+
+- __Aging Studies:__ ATAC-seq is valuable for investigating chromatin accessibility changes associated with aging. Researchers can use ATAC-seq to identify alterations in the epigenetic landscape that occur as individuals age. By profiling open chromatin regions in different age groups, scientists gain insights into the epigenetic basis of aging-related phenotypes and age-associated diseases. This information contributes to our understanding of the aging process.
+
+- __Transposable Element Analysis:__ ATAC-seq can be employed to study transposable elements (TEs), including retrotransposons and DNA transposons. TEs play a role in genome evolution and regulation. Researchers can use ATAC-seq to assess the impact of TEs on chromatin accessibility, gene regulation, and genome stability. Understanding TE dynamics is crucial for comprehending their involvement in various cellular processes and diseases.
+
 
 ## Benefits compared to other techniques
 
