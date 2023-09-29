@@ -88,8 +88,6 @@ __The link (technology -> application -> statistics)__
 
 ![Figure: Schematic of NucleoATAC workflow.](Pictures/nucleoATAC.png)
 
-<img src="Pictures/nucleoATAC.png" alt="Image" width="200px" height="150px"> 
-
 Finally, we would like to remind you that the choice of statistical model is not univocal and depends on the specific type of analysis that is being performed
 - The NB distribution is typically used to identify differentially accessible regions (DARs) between two or more samples;
 - The Poisson distribution can be used to model the read count in a particular region of the genome;
