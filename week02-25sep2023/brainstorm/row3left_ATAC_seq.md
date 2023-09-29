@@ -27,7 +27,8 @@ Sequence the PCR-amplified DNA library using an NGS platform.
 
 ### Sequencing methods:
 **Source** [Awesome ATAC-seq analysis](https://github.com/databio/awesome-atac-analysis)
-There are multiple platforms for ATAC-Seq
+
+There are multiple platforms for ATAC-Seq:
 - __Signac:__ Signac is a comprehensive ATAC-seq data analysis pipeline that includes tools for peak calling, differential peak analysis, motif analysis, and visualization. It is designed to be flexible and scalable, and it can be used to analyze data from a variety of different ATAC-seq experiments.
 - __SnapATAC:__ SnapATAC is a pipeline for ATAC-seq data analysis of single nuclei. It is designed to be fast and easy to use, and it provides a variety of features for quality control, peak calling, and differential peak analysis.
 - __ATAC-pipe:__ ATAC-pipe is a pipeline for ATAC-seq data analysis that is integrated with the Galaxy platform. This makes it easy to run and share ATAC-seq data analysis workflows.
