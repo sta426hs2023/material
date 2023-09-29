@@ -6,7 +6,7 @@ ATAC-seq is an abbreviation for 'Assay for Transposase-Accessible Chromatin with
 By analyzing what regions are open, it’s possible to understand what areas of the DNA are influencing the cell state, to study gene regulation, cell differentiation, and development, as well as to identify genetic risk factors for disease.
 
 ![ATAC](Pictures/ATAC.jpeg)
-- **Link:** [What is ATAC-seq](https://academic.oup.com/bib/article/23/3/bbac061/6543486)
+- **Image Source:** [What is ATAC-seq](https://academic.oup.com/bib/article/23/3/bbac061/6543486)
 
 ## How does ATAC-seq work
 ### Five steps:
@@ -35,11 +35,11 @@ The four most important steps of ATAC-seq analysis include:
 
 
 ![ATAC](Pictures/analysis.png)
-**Link:** [Four steps of ATAC-seq analysis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3)
+**Image Source:** [Four steps of ATAC-seq analysis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3)
 
 
 ## Interesting applications
-**Link** [Applications of ATAC-seq](https://emea.illumina.com/techniques/popular-applications/epigenetics/atac-seq-chromatin-accessibility.html)
+**Source** [Applications of ATAC-seq](https://emea.illumina.com/techniques/popular-applications/epigenetics/atac-seq-chromatin-accessibility.html)
 - __Disease-relevant regulatory mechanisms:__ ATAC-seq can be used to explore disease-relevant regulatory mechanisms. For example, researchers can use ATAC-seq to identify changes in chromatin accessibility that are associated with cancer, Alzheimer's disease, and other diseases. This information can help us to better understand how these diseases develop and to identify new therapeutic targets.
 
 - __Comparative epigenomics:__ ATAC-seq can be used to perform comparative epigenomics studies. For example, researchers can use ATAC-seq to compare the chromatin accessibility of different populations of people in order to identify epigenetic differences that are associated with disease or other traits. This information can help us to better understand the role of epigenetics in human health and disease.
