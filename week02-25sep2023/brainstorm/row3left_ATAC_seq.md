@@ -9,7 +9,7 @@ By analyzing what regions are open, it’s possible to understand what areas of 
 - **Image Source:** [What is ATAC-seq](https://academic.oup.com/bib/article/23/3/bbac061/6543486)
 
 ## How does ATAC-seq work
-### Five steps:
+### Four steps:
 - Tagmentation:
 Resuspend the nuclei in tagmentation buffer.
 Add the Tn5 transposase enzyme and sequencing adapters.
@@ -24,6 +24,16 @@ Adjust the number of PCR cycles based on the desired sequencing depth.
 
 - Sequencing:
 Sequence the PCR-amplified DNA library using an NGS platform.
+
+### Sequencing methods:
+**Source** [Awesome ATAC-seq analysis](https://github.com/databio/awesome-atac-analysis)
+There are multiple platforms for ATAC-Seq
+- __Signac:__ Signac is a comprehensive ATAC-seq data analysis pipeline that includes tools for peak calling, differential peak analysis, motif analysis, and visualization. It is designed to be flexible and scalable, and it can be used to analyze data from a variety of different ATAC-seq experiments.
+- __SnapATAC:__ SnapATAC is a pipeline for ATAC-seq data analysis of single nuclei. It is designed to be fast and easy to use, and it provides a variety of features for quality control, peak calling, and differential peak analysis.
+- __ATAC-pipe:__ ATAC-pipe is a pipeline for ATAC-seq data analysis that is integrated with the Galaxy platform. This makes it easy to run and share ATAC-seq data analysis workflows.
+- __ATAC2GRN:__ ATAC2GRN is a pipeline for ATAC-seq data analysis that is integrated with the Gene Regulatory Network (GRN) inference tool. This allows you to identify regulatory networks that are associated with the ATAC-seq peaks.
+- __Seq2science:__ Seq2science is a cloud-based platform for ATAC-seq data analysis. It provides a variety of tools for peak calling, differential peak analysis, motif analysis, and visualization. It is designed to be easy to use, even for users with no prior experience in ATAC-seq data analysis.
+
 
 
 ## How is ATAC-seq analysis conducted?
