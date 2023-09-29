@@ -17,7 +17,9 @@ You may find here some scientific literature about the DNAse-sequencing :
 
 - If you wish on the other hand to better understand what regulatory elements are, and what role they may play, you should read [this article published by the National Library of Medecine as well](https://pubmed.ncbi.nlm.nih.gov/26499213/#:~:text=Precisely%20identifying%20regulatory%20elements%20is,and%20the%20interactions%20between%20them)
 
+- A analysis of different statistical and computational methods can be found in [this article published by Nature Methods](https://www.nature.com/articles/nmeth.3772)
 
+-   For articles about specific statistical application we here have a article using [Bayseian mixture models](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4231734/) and [Hidden Markov Models](https://academic.oup.com/bioinformatics/article/30/22/3143/2390674)
 
 
 ### Authors
