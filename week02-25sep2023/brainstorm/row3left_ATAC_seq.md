@@ -87,15 +87,13 @@ __The link (technology -> application -> statistics)__
 | Integration of ATAC-seq with TCGA multi-omic data | Identify a large number of putative distal enhancers that distinguish molecular subtypes of cancers, uncover specific driving transcription factors via protein-DNA footprints, and nominate long-range gene-regulatory interactions in cancer. | A correlation-based model was developed to link ATAC-seq peaks to putative target genes. These putative links were validated using CRISPRi-based perturbation of the peak region followed by quantification of changes in gene expression. Publicly available HiChIP data and GTEx eQTL data were further used to support genome-wide peak-to-gene linkage predictions. Lastly, WGS and ATAC-seq were combined to identify non-coding mutations that affect chromatin accessibility in an allele-specific manner. |
 
 ![Figure: Schematic of NucleoATAC workflow.](Pictures/nucleoATAC.png)
+- **Image Source:** [Structured nucleosome fingerprints enable high-resolution mapping of chromatin architecture within regulatory regions](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4617971/)
 
 Finally, we would like to remind you that the choice of statistical model is not univocal and depends on the specific type of analysis that is being performed
 - The NB distribution is typically used to identify differentially accessible regions (DARs) between two or more samples;
 - The Poisson distribution can be used to model the read count in a particular region of the genome;
 - The log-normal distribution can be used to model the normalized read count in a particular region of the genome;
 - The beta-binomial distribution can be used to model count data that is overdispersed and bounded between 0 and 1, such as the proportion of reads that map to a particular region of the genome.
-
-
-
 
 
 
