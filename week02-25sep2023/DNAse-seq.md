@@ -15,7 +15,7 @@ DNase-seq, short for DNase I hypersensitive sites sequencing, is a method used t
 You may find here some scientific literature about the DNAse-sequencing :
 
 - A more introducing article, with detailed process is to find [on the website of the National Library of Medecine](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3627383/)
-- 
+
 - General information about DNAse-seq: [High-Resolution Mapping and Characterization of Open Chromatin across the Genome](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2669738/)
 
 - If you wish on the other hand to better understand what regulatory elements are, and what role they may play, you should read [this article published by the National Library of Medecine as well](https://pubmed.ncbi.nlm.nih.gov/26499213/#:~:text=Precisely%20identifying%20regulatory%20elements%20is,and%20the%20interactions%20between%20them)
