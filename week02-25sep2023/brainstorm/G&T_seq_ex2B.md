@@ -7,7 +7,7 @@
 4. [Team members](#team-members)
 
 ## Introduction <a name="introduction"></a>
-G&T sequencing is a technique for separating and simultaneously obtaining the sequences of genomic DNA and full-length mRNA from single cells, allowing to investigate genetic variation and its effect on gene expression. Isolated single cells are lysed, and polyadenylated RNA is captured using oligo-dT capture pimers. RNA is then separated from DNA using streptaidin-coated magnetic beads, after which both are amplified in parallel and sequenced.
+G&T sequencing is a technique for separating and simultaneously obtaining the sequences of genomic DNA and full-length mRNA from single cells, allowing to investigate genetic variation and its effect on gene expression. Isolated single cells are lysed, and polyadenylated RNA is captured using oligo-dT capture primers. RNA is then separated from DNA using streptavidin-coated magnetic beads, after which both are amplified in parallel and sequenced.
 
 ## Technology, Application & Statistics <a name="technology-application-statistics"></a>
 
@@ -24,4 +24,9 @@ Here is an example of the use of G&T-sequencing data, its application, and the s
 3. [Separation and parallel sequencing of the genomes and transcriptomes of single cells using G&T-seq by Macaulay *et al.*](https://doi.org/10.1038/nprot.2016.138)
 
 ## Team Members <a name="team-members"></a>
+
+We are the team *row5right*.
+
 * [AnnaToi01](https://github.com/AnnaToi01)
+* [ClaIgl](https://github.com/ClaIgl)
+* [LaksL](https://github.com/LaksL)
