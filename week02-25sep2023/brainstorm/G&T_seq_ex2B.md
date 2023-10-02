@@ -30,3 +30,4 @@ We are the team *row5right*.
 * [AnnaToi01](https://github.com/AnnaToi01)
 * [ClaIgl](https://github.com/ClaIgl)
 * [LaksL](https://github.com/LaksL)
+* [TScholier](https://github.com/TScholier)
