@@ -1,0 +1,67 @@
+---
+title: "Exercise 03"
+author: "Hubert Rehrauer"
+date: "02 10 2023"
+format:
+  html:
+    self-contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exploratory Data Analysis
+
+Do an exploratory data analysis of a matrix of expression values. The data consists of expression values for samples that were treated with DMSO and TSA. The samples were measured using three technologies: bulk, IFC96, IFC800. See the two RDS files `counts.RDS` and `phenodata.RDS`.
+
+The experiment has two experimental factors "Treatment" and "Technology". Treatment has two levels, Technology has three levels. Samples that have the same combination of Treatment & Technology are replicates.
+
+## Data Import
+
+```{r }
+x = readRDS("counts.RDS")
+anno = readRDS("phenodata.RDS")
+head(anno)
+
+```
+
+## Compute and visualize basic statistics on the experimental design
+
+How many replicates are there for each combination of factor levels? How many genes have an expression value above 0 in each sample? Are there systematic differences between the samples in the different conditions (treatment & technology). Visualize the following statistics per sample:
+
+number of detected genes
+
+total sum of counts per sample (serves as a proxy for the number of sequenced reads per sample)
+
+Color the samples by the experimental condition.
+
+## Normalize the data
+
+Scale the columns so that the total sum of all columns are identical
+
+## Transform the data to log-scale
+
+Use the function `log1p` to transform the data to log-scale
+
+## Visualize the distribution of the expression values
+
+Use violin plots and boxplots to visualize the distribution of the expression values. 
+Aggregate the replicates in the same experimental group into one average sample, and plot the averaged sample. Color by experimental factors.
+
+## Most variable genes
+
+Identify the 500 most variable genes (with largest variance across samples) and continue working with those
+
+## Sample correlations
+
+Compute and visualize the sample-to-sample correlations
+
+## Clustering
+
+Compute and visualize a hierarchical clustering of the samples, use the method `hclust`
+
+## Heatmap
+
+Use the package `pheatmap` to generate a heatmap of the expression data.
+
