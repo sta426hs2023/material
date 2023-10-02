@@ -1,4 +1,4 @@
-Group members: simongalkin
+Group members: simongalkin, lulocher, Garfieldfei, mneacsu
 
 ### miTRAP – miRNA trapping by RNA in vitro affinity purification
 MicroRNAs (miRNAs) control gene expression at the post-transcriptional level. However, the identification of miRNAs regulating the fate of a specific messenger RNA remains limited due to the imperfect complementarity of miRNAs and targeted transcripts. MiTRAP allows the rapid identification of miRNAs targeting an in vitro transcribed RNA in cell lysates. Сombination of miTRAP and miRNA-Seq provides an experimental screening approach suitable to identify regulatory miRNAs for an RNA bait of interest in a cellular context of choice.
