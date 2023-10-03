@@ -9,6 +9,9 @@
 ## Introduction <a name="introduction"></a>
 G&T sequencing is a technique for separating and simultaneously obtaining the sequences of genomic DNA and full-length mRNA from single cells, allowing to investigate genetic variation and its effect on gene expression. Isolated single cells are lysed, and polyadenylated RNA is captured using oligo-dT capture primers. RNA is then separated from DNA using streptavidin-coated magnetic beads, after which both are amplified in parallel and sequenced.
 
+![image](https://github.com/AnnaToi01/STA426_main/assets/58418063/27a0dbf3-a622-40dc-b890-b21e14c1b039)
+Fig. 1. Technical workflow of G&T-Seq according to Illumina [2].
+
 ## Technology, Application & Statistics <a name="technology-application-statistics"></a>
 
 Here is an example of the use of G&T-sequencing data, its application, and the statistical methods used to analyze it.
