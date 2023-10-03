@@ -26,7 +26,9 @@ Monday 11.00-11.45
 | 23.10.2023  | Hubert | RNA-seq quantification | RSEM  | X | X |
 | 30.10.2023  | Mark | edgeR+friends 1 | basic edgeR/voom | X  | X |
 | 06.11.2023  | tba | hands-on session #1: RNA-seq | FASTQC/Salmon/etc. | X| X |
-| 13.11.2023  | Mark | edgeR+friends 2  | advanced edgeR/voom | X | X |
+| 13.11.2023  | Mark | edgeR+friends 2  | advanced edgeR/voom | [Zero-inflated generalized Dirichlet multinomial
+regression model for microbiome compositional data analysis](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7410344/) (JL, PA)
+ | X |
 | 20.11.2023  | Hubert | single-cell 1: preprocessing, dim. reduction, clustering | clustering | X | X |
 | 27.11.2023  | tba | hands-on session #2: cytometry | cytof null comparison | X | X |
 | 04.12.2023  | Mark | single-cell 2: clustering, marker gene DE  | marker gene DE | X | X
