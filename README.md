@@ -24,7 +24,7 @@ Monday 11.00-11.45
 | 09.10.2023  | Mark | limma + friends | linear model simulation + design matrices | | |
 | 16.10.2023  | Hubert | mapping  | Rsubread | | |
 | 23.10.2023  | Hubert | RNA-seq quantification | RSEM  | X | X |
-| 30.10.2023  | Mark | edgeR+friends 1 | basic edgeR/voom | X  | X |
+| 30.10.2023  | Mark | edgeR+friends 1 | basic edgeR/voom | [Normalization of RNA-seq data using factor analysis](https://www.nature.com/articles/nbt.2931) (MR, RD) | X |
 | 06.11.2023  | tba | hands-on session #1: RNA-seq | FASTQC/Salmon/etc. | X| X |
 | 13.11.2023  | Mark | edgeR+friends 2  | advanced edgeR/voom | X | X |
 | 20.11.2023  | Hubert | single-cell 1: preprocessing, dim. reduction, clustering | clustering | X | X |
