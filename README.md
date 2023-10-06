@@ -23,8 +23,7 @@ Monday 11.00-11.45
 | 02.10.2023  | Hubert | NGS intro; exploratory data analysis | EDA in R | | |
 | 09.10.2023  | Mark | limma + friends | linear model simulation + design matrices | | |
 | 16.10.2023  | Hubert | mapping  | Rsubread | | |
-| 23.10.2023  | Hubert | RNA-seq quantification | RSEM  | X | X |
-| 23.10.2023  | Marie und Hannah | [SEACells infers transcriptional and epigenomic cellular states from single-cell genomics data](https://www.nature.com/articles/s41587-023-01716-9) | | X | |
+| 23.10.2023  | Hubert | RNA-seq quantification | RSEM  |[SEACells infers transcriptional and epigenomic cellular states from single-cell genomics data](https://www.nature.com/articles/s41587-023-01716-9) (MB, HW) | X |
 | 30.10.2023  | Mark | edgeR+friends 1 | basic edgeR/voom | X  | X |
 | 06.11.2023  | tba | hands-on session #1: RNA-seq | FASTQC/Salmon/etc. | X| X |
 | 13.11.2023  | Mark | edgeR+friends 2  | advanced edgeR/voom | X | X |
