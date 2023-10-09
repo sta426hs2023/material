@@ -25,7 +25,7 @@ Monday 11.00-11.45
 | 16.10.2023  | Hubert | mapping  | Rsubread | | |
 | 23.10.2023  | Hubert | RNA-seq quantification | RSEM  |[SEACells infers transcriptional and epigenomic cellular states from single-cell genomics data](https://www.nature.com/articles/s41587-023-01716-9) (MB, HW) | X |
 | 30.10.2023  | Mark | edgeR+friends 1 | basic edgeR/voom | [Normalization of RNA-seq data using factor analysis](https://www.nature.com/articles/nbt.2931) (MR, RD)  | X |
-| 06.11.2023  | tba | hands-on session #1: RNA-seq | FASTQC/Salmon/etc. | X| X |
+| 06.11.2023  | tba | hands-on session #1: RNA-seq | FASTQC/Salmon/etc. | [Statistical significance for genomewide studies](https://www.pnas.org/doi/epdf/10.1073/pnas.1530509100) (DA, KS, FM) | X |
 | 13.11.2023  | Mark | edgeR+friends 2  | advanced edgeR/voom | [OUTRIDER:A novel hierarchical clustering algorithm for gene sequences](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-13-174) (AB, PB, CD) | X |
 | 20.11.2023  | Hubert | single-cell 1: preprocessing, dim. reduction, clustering | clustering | X | X |
 | 27.11.2023  | tba | hands-on session #2: cytometry | cytof null comparison | [SpatialDM for rapid identification of spatially co-expressed ligand–receptor and revealing cell–cell communication patterns](https://www.nature.com/articles/s41467-023-39608-w) (EG, AE)| X |
