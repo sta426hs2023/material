@@ -30,7 +30,7 @@ Monday 11.00-11.45
 | 20.11.2023  | Hubert | single-cell 1: preprocessing, dim. reduction, clustering | clustering | X | X |
 | 27.11.2023  | tba | hands-on session #2: cytometry | cytof null comparison | [SpatialDM for rapid identification of spatially co-expressed ligand–receptor and revealing cell–cell communication patterns](https://www.nature.com/articles/s41467-023-39608-w) (EG, AE)| X |
 | 04.12.2023  | Mark | single-cell 2: clustering, marker gene DE  | marker gene DE | X | X
-| 11.12.2023  | tba | hands-on session #3: single-cell RNA-seq (cell type definition, differential state)  | full scRNA-seq pipeline | [chromVAR: inferring transcription-factor-associated accessibility from single-cell epigenomic data](https://www.nature.com/articles/nmeth.4401) (GP, GB, ER) | X |
+| 11.12.2023  | tba | hands-on session #3: single-cell RNA-seq (cell type definition, differential state)  | full scRNA-seq pipeline | [chromVAR: inferring transcription-factor-associated accessibility from single-cell epigenomic data](https://www.nature.com/articles/nmeth.4401) (GP, ER, GB) | X |
 | 18.12.2023  | Mark | spatial omics  | spatial statistics | X | X |
  
 
