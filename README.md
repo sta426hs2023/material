@@ -31,7 +31,7 @@ Monday 11.00-11.45
 | 27.11.2023  | tba | hands-on session #2: cytometry | cytof null comparison | [SpatialDM for rapid identification of spatially co-expressed ligand–receptor and revealing cell–cell communication patterns](https://www.nature.com/articles/s41467-023-39608-w) (EG, AE) | [Differential abundance testing on single-cell data using k-nearest neighbor graphs](https://www.nature.com/articles/s41587-021-01033-z)(CC, ZY, XY) |
 | 04.12.2023  | Mark | single-cell 2: clustering, marker gene DE  | marker gene DE | [Redefining CpG islands using hidden Markov models](https://academic.oup.com/biostatistics/article/11/3/499/256898?login=false) (MI, MT, AT) | [SPOTlight: seeded NMF regression to deconvolute spatial transcriptomics spots with single-cell transcriptomes](https://academic.oup.com/nar/article/49/9/e50/6129341?login=false#248806227) (NG, ZZ)
 | 11.12.2023  | tba | hands-on session #3: single-cell RNA-seq (cell type definition, differential state)  | full scRNA-seq pipeline | [Supervised discovery of interpretable gene programs from single-cell data](https://www.nature.com/articles/s41587-023-01940-3) (GP, ER, GB) | [Capturing Heterogeneity in Gene Expression Studies by Surrogate Variable Analysis](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030161) (HJ, XZ) |
-| 18.12.2023  | Mark | spatial omics  | spatial statistics | X | X |
+| 18.12.2023  | Mark | spatial omics  | spatial statistics | [nnSVG for the scalable identification of spatially variable genes using nearest-neighbor Gaussian processes](https://www.nature.com/articles/s41467-023-39748-z) (LL) | X |
  
 
 ## Course material
