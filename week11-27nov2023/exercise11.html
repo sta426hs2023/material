@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mark Robinson; written by Helena L. Crowell &amp; Stephany Orjuela">
-<meta name="dcterms.date" content="2023-11-26">
+<meta name="dcterms.date" content="2023-11-27">
 
 <title>STA426 - Week 11</title>
 <style>
@@ -2660,7 +2660,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 26, 2023</p>
+      <p class="date">November 27, 2023</p>
     </div>
   </div>
   
@@ -2696,14 +2696,15 @@ vertical-align: -.125em;
 <strong>1. Give a <em>brief</em> description of each column of the panel and metadata tables.</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># download panel &amp; metadata </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;http://imlspenticton.uzh.ch/robinson_lab/cytofWorkflow&quot;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>fns <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">panel =</span> <span class="st">&quot;PBMC8_panel_v3.xlsx&quot;</span>, <span class="at">md =</span> <span class="st">&quot;PBMC8_metadata.xlsx&quot;</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (fn <span class="cf">in</span> fns) <span class="fu">download.file</span>(<span class="fu">file.path</span>(url, fn), <span class="at">destfile =</span> fn, <span class="at">mode =</span> <span class="st">&quot;wb&quot;</span>) </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># load into R</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>panel <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(fns<span class="sc">$</span>panel)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>md <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(fns<span class="sc">$</span>md)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://zenodo.org/records/10039274/files&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>fns <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">panel =</span> <span class="st">&quot;PBMC8_panel_v3.xlsx&quot;</span>, <span class="at">md =</span> <span class="st">&quot;PBMC8_metadata.xlsx&quot;</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (fn <span class="cf">in</span> fns) <span class="fu">download.file</span>(<span class="fu">file.path</span>(url, fn), <span class="at">destfile =</span> fn, <span class="at">mode =</span> <span class="st">&quot;wb&quot;</span>) </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># load into R</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>panel <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(fns<span class="sc">$</span>panel)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>md <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(fns<span class="sc">$</span>md)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 
