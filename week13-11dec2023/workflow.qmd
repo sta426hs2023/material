@@ -333,6 +333,8 @@ degs <- unique(res2[res2$p_adj.loc<0.05,"gene"])
 
 # we flatten the pb object (putting all cell types in the same assay) and calculate foldchanges
 pb2 <- pbFlatten(pb)
+# we add a logFC assay:
+pb2 <- sechm::log2FC(pb2, fromAssay="logcpm", controls=pb2$group_id=="WT", by=pb2$cluster_id)
 # we reorder
 pb2 <- pb2[,order(pb2$cluster_id, pb2$group_id)]
 # we plot a heatmap of the logFC of the top 200 genes across all cell types
