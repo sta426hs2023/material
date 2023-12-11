@@ -332,7 +332,7 @@ pbHeatmap(sce, res, k="astrocytes", top_n = 5)
 degs <- unique(res2[res2$p_adj.loc<0.05,"gene"])
 
 # we flatten the pb object (putting all cell types in the same assay) and calculate foldchanges
-pb2 <- flattenPB(pb, lfc_group="group_id")
+pb2 <- pbFlatten(pb)
 # we reorder
 pb2 <- pb2[,order(pb2$cluster_id, pb2$group_id)]
 # we plot a heatmap of the logFC of the top 200 genes across all cell types
