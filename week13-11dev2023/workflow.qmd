@@ -14,18 +14,18 @@ editor_options:
 ```{r}
 suppressPackageStartupMessages({
   library(SingleCellExperiment)
-  library(scran)
-  library(scater)
-  library(batchelor)
-  library(scDblFinder)
-  library(sctransform)
-  library(muscat)
-  library(SEtools)
-  library(cowplot)
-  library(BiocParallel)
-  library(BiocNeighbors)
-  library(ComplexHeatmap)
-  library(igraph)
+  library(scran) # sc analysis
+  library(scater) # sc QC and plotting
+  library(batchelor) # batch correction methods
+  library(scDblFinder) # doublet detection
+  # library(sctransform) # variance-stabilizing transformation (optional)
+  library(muscat) # differential expression analysis
+  library(BiocParallel) # handling multi-threading
+  library(BiocNeighbors) # specifying params for kNN
+  library(igraph) # for manual graph clustering
+  library(sechm) # plotting
+  library(ggplot2) # plotting
+  library(patchwork) # to combine
 })
 ```
 
@@ -33,10 +33,17 @@ suppressPackageStartupMessages({
 
 ## Loading the data
 
-```{r sce object}
+
+```{r download, eval=FALSE}
 ## if you haven't downloaded it yet:
 download.file("http://imlspenticton.uzh.ch/teaching/STA426/week13.SCE.rds", dest="week13.SCE.rds")
+# note that by default downloads in R timeout after 1min, so
+# when downloading large objects you might need to increase this limit:
+# options(timeout=1200) # timeout after 20min, instead of 1min...
+```
 
+
+```{r sce object}
 sce <- readRDS("week13.SCE.rds")
 
 # Have a look at the object
@@ -63,7 +70,7 @@ table(sce$sample_id, sce$group_id)
 
 ## QC
 
-```{r}
+```{r qc}
 # scater / scuttle
 # get mitochondrial genes:
 mito <- grep("mt-", rownames(sce), value = TRUE)
@@ -84,28 +91,34 @@ sce$qc.out <- isOutlier(log(sce$sum),nmads=3,batch=sce$sample_id) |
 # a fancier job would be accomplished by https://github.com/wmacnair/SampleQC
 table(sce$qc.out)
 
+# get rid of seldom detected genes
+sce <- sce[rowData(sce)$detected>=4,]
+
 # we flag doublets:
-sce <- scDblFinder(sce, samples="sample_id", BPPARAM=MulticoreParam(4))
+sce <- scDblFinder(sce, samples="sample_id", BPPARAM=MulticoreParam(6))
 table(sce$scDblFinder.class)
 ```
 
 ## Normalization & reduction
 
-```{r}
-# get rid of seldom detected genes
-sce <- sce[rowData(sce)$detected>=4,]
 
-## (faster) standard log-normalization
-# sce <- logNormCounts(sce)
+```{r normPCA}
+# (fast) standard log-normalization
+sce <- logNormCounts(sce)
 
-# variance-stabilizing transformation
-vst <- suppressWarnings(sctransform::vst(counts(sce)))
-logcounts(sce) <- vst$y
-# get highly-variable genes
-hvg <- row.names(sce)[order(vst$gene_attr$residual_variance, decreasing=TRUE)[1:2000]]
+# get high-variable genes (normally we'd take 3000, here we'll go skim for speed)
+hvg <- getTopHVGs(sce, n=1000)
+
+# alternative: variance-stabilizing transformation
+# vst <- suppressWarnings(sctransform::vst(counts(sce)))
+# logcounts(sce) <- vst$y
+# # get highly-variable genes
+# hvg <- row.names(sce)[order(vst$gene_attr$residual_variance,
+#                             decreasing=TRUE)[1:1000]]
+
 
 # run PCA
-sce <- runPCA(sce, subset_row=hvg)
+sce <- runPCA(sce, ncomponents=50, subset_row=hvg)
 
 # check the variance explained by the PCs:
 pc.var <- attr(reducedDim(sce),"percentVar")
@@ -113,59 +126,93 @@ plot(pc.var, xlab="PCs", ylab="% variance explained")
 # restrict to the first 20 components:
 reducedDim(sce) <- reducedDim(sce)[,1:20]
 
-# run and plot 2d projections based on the PCA:
-sce <- runTSNE(sce, dimred="PCA")
-sce <- runUMAP(sce, dimred="PCA", n_neighbors=30)
+# run and plot 2d projections based on the PCA
+# to improve performance, use Annoy kNN approximation:
+sce <- runTSNE(sce, dimred="PCA", BNPARAM=AnnoyParam())
+sce <- runUMAP(sce, dimred="PCA", n_neighbors=30, BNPARAM=AnnoyParam())
+
+# you can compare the 2d embeddings:
+# sleepwalk::sleepwalk( as.list(reducedDims(sce)[c("TSNE","UMAP")]),
+#                       featureMatrices=reducedDims(sce)[["PCA"]] )
 
 # plot by doublet score
-plot_grid(plotUMAP(sce, colour_by="scDblFinder.score"), 
-          plotTSNE(sce, colour_by="scDblFinder.score"))
+plotUMAP(sce, colour_by="scDblFinder.score") +
+  plotTSNE(sce, colour_by="scDblFinder.score") +
+  plot_layout(guides = "collect")
 
 # filter out bad cells
 sce <- sce[,sce$scDblFinder.class!="doublet" & !sce$qc.out]
-
-# check mixing:
-plot_grid(plotTSNE(sce, colour_by="group_id"), plotTSNE(sce, colour_by="sample_id"))
-
-## a better readout (but longer to compute) for cell mixing would be given by the CellMixS package:
-# sce <- cms(sce, k=50, group = "sample_id", BPPARAM=MulticoreParam(3))
-# plotTSNE(sce, colour_by="cms_smooth")
 ```
 
 ## Batch correction
 
-```{r}
+First we want to check whether there's a need for integration/batch correction.
+This can be assessed by the extent to which the samples are well-mixed.
+
+```{r check mixing}
+# check mixing:
+plotTSNE(sce, colour_by="group_id") +
+  plotTSNE(sce, colour_by="sample_id") +
+  plot_layout(guides = "collect")
+
+## a much better readout (but long to compute) for cell mixing would be given 
+## by the CellMixS package:
+# sce <- cms(sce, k=50, group = "sample_id", BPPARAM=MulticoreParam(6))
+# plotTSNE(sce, colour_by="cms_smooth")
+```
+
+
+```{r mnn}
 # batch corrected using the mutual nearest neighbors
 sce2 <- fastMNN(sce, batch=sce$sample_id, BNPARAM=AnnoyParam())
+# (see Harmony or Seurat integration for "stronger" integration methods)
 # we take the corrected PCA
 reducedDim(sce, type="PCA") <- reducedDim(sce2)[,1:20]
 # and recompute the 2d projections
-sce <- runTSNE(sce, dimred="PCA")
-sce <- runUMAP(sce, dimred="PCA", n_neighbors=25)
+sce <- runTSNE(sce, dimred="PCA", BNPARAM=AnnoyParam())
+sce <- runUMAP(sce, dimred="PCA", n_neighbors=25, BNPARAM=AnnoyParam())
 
-plot_grid(plotTSNE(sce, colour_by="group_id"), plotTSNE(sce, colour_by="sample_id"))
+plotTSNE(sce, colour_by="group_id") + 
+  plotTSNE(sce, colour_by="sample_id")
 ```
 
 ## Clustering
 
+
 ```{r}
 # BiocNeighbors
 g <- buildKNNGraph(sce, BNPARAM=AnnoyParam(), use.dimred="PCA", k=30)
-sce$cluster <- as.factor(cluster_louvain(g)$membership)
-# if we needed to play with the resultion, we could instead use an algorithm that allows more tuning, e.g.:
-# sce$cluster2 <- leidenAlg::leiden.community(g, resolution=0.5)$membership
+sce$cluster <- as.factor(cluster_leiden(g, objective_function="modularity",
+                                        n_iterations=20)$membership)
+table(sce$cluster)
+# we could play with the `resolution_parameter` of `cluster_leiden` 
+# to decide on the granularity
 
-saveRDS(sce, file="week13.SCE.processed.rds")
+plotTSNE(sce, colour_by="cluster", text_by="cluster") +
+  plotUMAP(sce, colour_by="cluster", text_by="cluster")
+```
 
-plot_grid( plotTSNE(sce, colour_by="cluster", text_by="cluster"),
-           plotUMAP(sce, colour_by="cluster", text_by="cluster") )
+```{r clustering}
+# BiocNeighbors
+g <- buildKNNGraph(sce, BNPARAM=AnnoyParam(), use.dimred="PCA", k=30)
+sce$cluster <- as.factor(cluster_leiden(g, objective_function="modularity",
+                                        n_iterations=20)$membership)
+table(sce$cluster)
+# we could play with the `resolution_parameter` of `cluster_leiden` 
+# to decide on the granularity
+
+plotTSNE(sce, colour_by="cluster", text_by="cluster") +
+  plotUMAP(sce, colour_by="cluster", text_by="cluster")
 ```
 
 ## Cluster abundances across samples
 
-```{r}
+
+```{r abundances}
 ca <- table(cluster=sce$cluster, sample=sce$sample_id)
-ggplot(as.data.frame(ca), aes(sample, cluster, fill=Freq)) + geom_tile() + geom_text(aes(label=Freq))
+ggplot(as.data.frame(ca), aes(reorder(sample), cluster, fill=Freq)) +
+  geom_tile() + geom_text(aes(label=Freq)) +
+  scale_fill_viridis_c()
 ```
 
 
@@ -173,9 +220,10 @@ ggplot(as.data.frame(ca), aes(sample, cluster, fill=Freq)) + geom_tile() + geom_
 
 ## De-novo marker identification
 
-```{r}
+```{r findMarkers}
 # we identify genes that differ between clusters:
-mm <- scran::findMarkers(sce, groups=sce$cluster, test.type="binom")
+mm <- scran::findMarkers(sce, groups=sce$cluster, test.type="binom",
+                         BPPARAM=MulticoreParam(6))
 # we select the top 5 markers by cluster:
 markers <- unique(unlist(lapply(mm, FUN=function(x){
   head(row.names(x[x$FDR<0.01,]),5)
@@ -184,11 +232,11 @@ markers <- unique(unlist(lapply(mm, FUN=function(x){
 
 ## Known markers
 
-```{r}
+```{r knownMarkers}
 genes <- list(
   astrocytes = c("Aqp4", "Gfap", "Fgfr3","Dio2"),
   endothelial = c("Cldn5","Nostrin","Flt1"),
-  microglia = c("C1qb","Tyrobp","P2ry12", "Csf1r", "Irf8"),
+  microglia = c("C1qb","Tyrobp","P2ry12", "Csf1r"),
   neuronal = c("Snap25", "Stmn2", "Syn1", "Rbfox3"),
   excNeuron = c("Slc17a7","Camk2a","Grin2b","Fezf2"),
   inhNeuron = c("Gad1","Lhx6","Adarb2"),
@@ -202,55 +250,75 @@ km <- lapply(genes, FUN=function(g) grep(paste0(g, "$", collapse="|"), rownames(
 
 ## Pseudo-bulk aggregation
 
-```{r}
+```{r checkMarkers}
 # muscat
 # mean logcounts by cluster:
 pb <- aggregateData(sce, "logcounts", by=c("cluster"), fun="mean")
-
 assayNames(pb) <- "logcounts"
+assays(pb)$propOfMax <- exp(logcounts(pb))/rowMaxs(exp(logcounts(pb)))
 rowData(pb)$marker4 <- NA
 rowData(pb)[unlist(km),"marker4"] <- rep(names(km),lengths(km))
-sechm::sechm(pb, c(unlist(km)), assayName = "logcounts", gaps_row = "marker4", show_colnames = TRUE, do.scale = TRUE, breaks=1, row_title_rot=0)
 
-
-# build a heatmap of the mean logcounts of the known markers:
-h1 <- pheatmap(assay(pb)[unlist(km),], annotation_row=data.frame(row.names=unlist(km), type=rep(names(km), lengths(km))), split=rep(names(km), lengths(km)), cluster_rows=FALSE, scale="row")
-h1
-# heatmap for the de-novo markers:
-h2 <- pheatmap(assay(pb)[markers,], scale="row")
-h2
+sechm(pb, c(unlist(km)), assayName="logcounts", gaps_row="marker4",
+      show_colnames=TRUE, do.scale=TRUE, breaks=1, row_title_rot=0) + 
+  sechm(pb, c(unlist(km)), assayName = "propOfMax", show_colnames=TRUE,
+        do.scale=FALSE, hmcols=viridis::viridis(100), 
+        row_names_gp=gpar(fontsize=9))
 ```
 
-```{r}
-# we will assign clusters to the cell type whose markers are the most expressed
+
+```{r checkMakers2}
+# heatmap for the de-novo markers:
+sechm(pb, markers, assayName = "propOfMax", show_colnames=TRUE,
+        do.scale=FALSE, hmcols=viridis::viridis(100), 
+        row_names_gp=gpar(fontsize=9))
+```
+
+For simplicity, here rather than working on all clusters we'll group them by broad cell class. As a very rough approximation to manual annotation, we will assign clusters to the cell type whose markers are the most expressed:
+
+```{r quickAnnotation}
 # we get rid of the unspecific neuronal markers:
-km <- km[names(km)!="neuronal"]
+km2 <- km[names(km)!="neuronal"]
 # we extract the pseudo-bulk counts of the markers for each cluster
-mat <- assay(pb)[unlist(km),]
+mat <- assay(pb)[unlist(km2),]
 # we aggregate across markers of the same type
-mat <- aggregate(t(scale(t(mat))), by=list(type=rep(names(km), lengths(km))), FUN=sum)
+mat <- aggregate(t(scale(t(mat))),
+                 by=list(type=rep(names(km2), lengths(km2))),
+                 FUN=sum)
 # for each column (cluster), we select the row (cell type) which has the maximum aggregated value
 cl2 <- mat[,1][apply(mat[,-1], 2, FUN=which.max)]
+
 # we convert the cells' cluster labels to cell type labels:
 sce$cluster2 <- cl2[sce$cluster]
+table(sce$cluster, sce$cluster2)
+plotUMAP(sce, colour_by="cluster2", text_by="cluster2")
 
 # we aggregate again to pseudo-bulk using the new clusters
 pb <- aggregateData(sce, "logcounts", by=c("cluster2"), fun="mean")
-# we plot again the expression of the markers as a sanity check
-h1 <- pheatmap(assay(pb)[unlist(km),], annotation_row=data.frame(row.names=unlist(km), type=rep(names(km), lengths(km))), split=rep(names(km), lengths(km)), cluster_rows=FALSE, scale="row")
+assayNames(pb) <- "logcounts"
+# and we plot again the expression of the markers as a sanity check
+rowData(pb)$marker4 <- NA
+rowData(pb)[unlist(km),"marker4"] <- rep(names(km),lengths(km))
+sechm(pb, c(unlist(km)), assayName="logcounts", gaps_row="marker4",
+      show_colnames=TRUE, do.scale=TRUE, breaks=1, row_title_rot=0)
 
 plotTSNE(sce, colour_by="cluster2", text_by="cluster2")
+saveRDS(sce, file="week13.SCE.processed.rds")
 ```
 
 # Differential state analysis
 
-```{r}
+```{r pseudobulk}
 # we aggregate by cluster x sample to perform pseudo-bulk differential state analysis
-sce <- muscat::prepSCE(sce, kid="cluster2")
+sce <- muscat::prepSCE(sce, kid="cluster2", sid = "sample_id",
+                       gid = "group_id")
 pb <- aggregateData(sce)
 
 pbMDS(pb)
+```
 
+
+```{r differentialAnalysis}
 # we run edgeR on each cluster and extract the results
 res <- pbDS(pb)
 res2 <- dplyr::bind_rows(res$table[[1]])
@@ -268,10 +336,17 @@ pb2 <- flattenPB(pb, lfc_group="group_id")
 # we reorder
 pb2 <- pb2[,order(pb2$cluster_id, pb2$group_id)]
 # we plot a heatmap of the logFC of the top 200 genes across all cell types
-# SEtools / sechm
-sechm(pb2, head(degs,200), assayName="log2FC", gaps_at="cluster_id")
+sechm(pb2, head(degs,200), assayName="log2FC", gaps_at="cluster_id",
+      column_title_gp=gpar(fontsize=9))
 ```
 
+
+
+# Session info
+
+```{r sessionInfo}
+sessionInfo()
+```
 
 
 
